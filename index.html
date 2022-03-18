@@ -147,23 +147,14 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code(Coming Soon)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -173,7 +164,9 @@
   </div>
 </section>
 
-<section class="hero teaser">
+
+<!-- [The Teaser Video Exmaple] -->
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop height="100%">
@@ -187,9 +180,9 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
-
+<!-- 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -245,7 +238,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -256,31 +249,28 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Transformers have gained much attention by outperforming convolutional neural networks in many 2D vision
+            tasks. However, they are known to have generalization problems and rely on massive-scale pre-training and sophisticated 
+            training techniques. When applying to 3D tasks,
+            the irregular data structure and limited data scale add to
+            the difficulty of transformer’s application.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            We propose CodedVTR (Codebook-based Voxel TRansformer), which im
+            proves data efficiency and generalization ability for 3D
+            sparse voxel transformers. On the one hand, we propose the
+            codebook-based attention that projects an attention space
+            into its subspace represented by the combination of “pro
+            totypes” in a learnable codebook. It regularizes attention
+            learning and improves generalization. On the other hand,
+            we propose geometry-aware self-attention that utilizes ge
+            ometric information (geometric pattern, density) to guide
+            attention learning. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            CodedVTR could be embedded into existing sparse convolution-based methods, and bring consis
+            tent performance improvements for indoor and outdoor 3D
+            semantic segmentation tasks.
           </p>
         </div>
       </div>
@@ -408,7 +398,7 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -431,7 +421,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
