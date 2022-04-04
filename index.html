@@ -256,21 +256,16 @@
             the difficulty of transformer’s application.
           </p>
           <p>
-            We propose CodedVTR (Codebook-based Voxel TRansformer), which im
+            We propose CodedVTR (<b>Code</b>>book-based <b>V</b>oxel <b>TR</b>ansformer), which im
             proves data efficiency and generalization ability for 3D
             sparse voxel transformers. On the one hand, we propose the
             codebook-based attention that projects an attention space
-            into its subspace represented by the combination of “pro
-            totypes” in a learnable codebook. It regularizes attention
+            into its subspace represented by the combination of “prototypes” in a learnable codebook. It regularizes attention
             learning and improves generalization. On the other hand,
-            we propose geometry-aware self-attention that utilizes ge
-            ometric information (geometric pattern, density) to guide
-            attention learning. 
+            we propose geometry-aware self-attention that utilizes geometric information (geometric pattern, density) to guide attention learning. 
           </p>
           <p>
-            CodedVTR could be embedded into existing sparse convolution-based methods, and bring consis
-            tent performance improvements for indoor and outdoor 3D
-            semantic segmentation tasks.
+            CodedVTR could be embedded into existing sparse convolution-based methods, and bring consistent performance improvements for indoor and outdoor 3Dsemantic segmentation tasks.
           </p>
         </div>
       </div>
@@ -278,12 +273,23 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="src.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Poster. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Poster</h2>
+        <div class="publication-poster">
+          <img src="./static/src/poster.png"
+            class="poster"
+            lt="Poster."/>
         </div>
       </div>
     </div>
@@ -297,18 +303,19 @@
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
+      <!-- generalization Problem. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Transformer's Generalization Issue</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Transformers are known to have generalization issues. It requires large-scale pre-training and cannot be directly trained
+            on smaller datasets without overfitting. The ViT paper states <i>"When directly trained on the ImageNet, ViT yields modest accuracies of a few points below ResNets of comparable size"</i>
           </p>
-          <video id="dollyzoom" autoplay controls muted loop height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <div class="column is-3 has-text-centered">
+            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_start.jpg"
+            class="interpolation-image"
+            lt="Interpolate start reference image."/>
+          </div>
         </div>
       </div>
       <!--/ Visual Effects. -->
@@ -431,12 +438,13 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@article{Zhao2022CodedVTRCS,
+      title={CodedVTR: Codebook-based Sparse Voxel Transformer with Geometric Guidance},
+      author={Tianchen Zhao and Niansong Zhang and Xuefei Ning and He Wang and Li Yi and Yu Wang},
+      journal={ArXiv},
+      year={2022},
+      volume={abs/2203.09887}
+    }</code></pre>
   </div>
 </section>
 
