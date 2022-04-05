@@ -140,7 +140,7 @@
                 <a href="http://nicsefc.ee.tsinghua.edu.cn/%2Fnics_file%2Fpdf%2F392e727e-ab7a-4883-a05a-13d9c85893b5.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-file-text-0"></i>
+                      <i class="fab fa-file-alt-0"></i>
                   </span>
                   <span>Slides</span>
                 </a>
@@ -249,10 +249,10 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Poster</h2>
         <div class="publication-poster">
-          <!-- <img src="./static/src/poster.png"
+          <img src="./static/src/poster.png"
             class="poster"
-            lt="Poster."/> -->
-            <embed src="./static/src/poster.pdf" width="1600px" height="900px" />
+            lt="Poster."/>
+            <!-- <embed src="./static/src/poster.pdf" width="1600px" height="900px" /> -->
         </div>
       </div>
     </div>
@@ -330,7 +330,9 @@
         <h3 class="title is-4">Codebook-based Self-Attention</h3>
         <div class="content has-text-justified">
           <p>
-            we use something something
+            Instead of directly learning the mapping from the activation space to the attention weight space. We project the attention learning
+            space to its subspace represented by the weighted sum of a few attention weight "prototypes" (codebook elements). It works as a regularization
+            and could improve generalization. 
           </p>
         </div>
         <div class="content has-text-centered">
@@ -344,7 +346,9 @@
         <h3 class="title is-4">Geometric-aware Self-Attention</h3>
         <div class="content has-text-justified">
           <p>
-            we use something something geo
+            Considering the unique properties for 3D Data, we carefully design distinctive geometric shapes and assign them as the attention
+            span of the codebook elements. We also use the geometric information to directly guide the attention learning, encouraging the attention
+            to choose the code with matching sparse pattern with input activation. 
           </p>
         </div>
         <div class="content has-text-centered">
@@ -369,7 +373,9 @@
         <h3 class="title is-4">Visualization of Attention Map</h3>
         <div class="content has-text-justified">
           <p>
-            we use something something geo
+            One of the well-known issue of transformer optimization is the "attention collapse". The attention map tends to become
+            uniform in latter layers. When introducing codebook-based attention, the codes also tends to be similar. After employing 
+            the geometric guidance, the attention map becomes distinctive. 
           </p>
         </div>
         <div class="content has-text-centered">
@@ -382,7 +388,8 @@
         <h3 class="title is-4">Visualization of Geometry Guidance</h3>
         <div class="content has-text-justified">
           <p>
-            we use something something geo
+            The voxels on wall corner tend to choose "vertical-cross" shaped code, the voxles 
+            on floor and desk tends to choose the "plane" shaped codes. The remote voxels with low density favors the code with larger receptive field. 
           </p>
         </div>
         <div class="content has-text-centered">
@@ -395,7 +402,8 @@
         <h3 class="title is-4">Performance</h3>
         <div class="content has-text-justified">
           <p>
-            we use something something geo
+            CodedVTR could improve performance on both indoor and outdoor 3d semantic segmentation tasks. Noted that our CodedVTR block is 
+            compatible with existing sparse-conv based methods. (e.g., SPVCNN)
           </p>
         </div>
         <div class="content has-text-centered">
