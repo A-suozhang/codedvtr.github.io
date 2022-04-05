@@ -118,7 +118,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://nicsefc.ee.tsinghua.edu.cn/%2Fnics_file%2Fpdf%2F4e19ce30-1cb0-4447-91b2-ed2da43238e9.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -127,7 +127,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2203.09887"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -135,14 +135,14 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              <!-- Sides Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="http://nicsefc.ee.tsinghua.edu.cn/%2Fnics_file%2Fpdf%2F392e727e-ab7a-4883-a05a-13d9c85893b5.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-youtube"></i>
+                      <i class="fab fa-file-text-0"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Slides</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -249,9 +249,10 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Poster</h2>
         <div class="publication-poster">
-          <img src="./static/src/poster.png"
+          <!-- <img src="./static/src/poster.png"
             class="poster"
-            lt="Poster."/>
+            lt="Poster."/> -->
+            <embed src="./static/src/poster.pdf" width="1265px" height="2249px" />
         </div>
       </div>
     </div>
@@ -309,9 +310,10 @@
         <h3 class="title is-4">Transformer's generalization Issue</h3>
         <div class="content has-text-justified">
           <p>
-            Transformers are known to have generalization issues. It requires large-scale pre-training and cannot be directly trained
-            on smaller datasets without overfitting. The ViT paper states <i>"When directly trained on the ImageNet, 
-            ViT yields modest accuracies of a few points below ResNets of comparable size"</i>
+            Transformers are known to have <b>generalization issues</b>. It requires large-scale pre-training and cannot be directly trained
+            on smaller datasets without overfitting. As the ViT paper states <i>"When directly trained on the ImageNet, 
+            ViT yields modest accuracies of a few points below ResNets of comparable size".</i> When introducing transformers into the 3d domain,
+            the generalization issue is aggravated for 3d data's relative restricted data scale and unique properties(sparse, geometric shape). 
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
@@ -355,7 +357,7 @@
       </div>
     </div>
   <!--/ Motivation. -->
-  </div>>
+  </div>
 </div>
 
 <section class="section">
@@ -402,9 +404,9 @@
           alt="Interpolate start reference image."/>
         </div>
         <!--/ Geo-Vis. -->
-      </div>>
-    </div>>
-</section>>
+      </div>
+    </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
