@@ -312,17 +312,17 @@
           <p>
             Transformers are known to have <b>generalization issues</b>. It requires large-scale pre-training and cannot be directly trained
             on smaller datasets without overfitting. As the ViT paper states <i>"When directly trained on the ImageNet, 
-            ViT yields modest accuracies of a few points below ResNets of comparable size".</i> When introducing transformers into the 3d domain,
+            ViT yields modest accuracies of a few points below ResNets of comparable size".</i> When introducing transformers into the <b>3d domain</b>,
             the generalization issue is aggravated for 3d data's relative restricted data scale and unique properties(sparse, geometric shape). 
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
+        <!-- <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
             <img src="./static/src/motivation.png"
                   class="interpolation-image"
                   alt="Interpolate start reference image."/>
           </div>
-        </div>
+        </div> -->
         <br/>
         <!--/ Generalization. -->
 
@@ -336,9 +336,9 @@
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/src/codebook.png"
-          class="interpolation-image"
-          alt="Interpolate start reference image."/>
+          <img src="./static/src/codebook-attn.png"
+          class="Codebook-based self-attention"
+          alt="Codebook-based self-attention image."/>
         </div>
         <!--/ Codebook. -->
 
@@ -352,9 +352,9 @@
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/src/codebook.png"
-          class="interpolation-image"
-          alt="Interpolate start reference image."/>
+          <img src="./static/src/geo-attn.png"
+          class="geometry-attention"
+          alt="Geometry attention image."/>
         </div>
         <!--/ Geometric. -->
 
@@ -379,9 +379,9 @@
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/src/codebook.png"
-          class="interpolation-image"
-          alt="Interpolate start reference image."/>
+          <img src="./static/src/attn-map-viz.png"
+          class="geo-vis"
+          alt="Attention map visualization."/>
         </div>
         <!--/ AttnMap. -->
         <!-- Geo-vis. -->
@@ -393,9 +393,9 @@
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/src/attn-map-viz.png"
-          class="attn-map-image"
-          alt="Visualization of attention map."/>
+          <img src="./static/src/geo-vis.png"
+          class="geo-vis"
+          alt="Visualization of geometry."/>
         </div>
         <!--/ Geo-Vis. -->
         <!-- Geo-vis. -->
