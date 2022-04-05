@@ -311,9 +311,9 @@
         <div class="content has-text-justified">
           <p>
             Transformers are known to have <b>generalization issues</b>. It requires large-scale pre-training and cannot be directly trained
-            on smaller datasets without overfitting. As the ViT paper states <i>"When directly trained on the ImageNet, 
+            on smaller datasets without overfitting. As the ViT paper states, <i>"When directly trained on the ImageNet, 
             ViT yields modest accuracies of a few points below ResNets of comparable size".</i> When introducing transformers into the <b>3d domain</b>,
-            the generalization issue is aggravated for 3d data's relative restricted data scale and unique properties(sparse, geometric shape). 
+            the generalization issue is aggravated by 3d data's relative restricted data scale and unique properties (sparse, geometric shape). 
           </p>
         </div>
         <!-- <div class="columns is-vcentered interpolation-panel">
@@ -331,7 +331,7 @@
         <div class="content has-text-justified">
           <p>
             Instead of directly learning the mapping from the activation space to the attention weight space. We project the attention learning
-            space to its subspace represented by the weighted sum of a few attention weight "prototypes" (codebook elements). It works as a regularization
+            space to its subspace represented by the weighted sum of a few attention weight "prototypes" (codebook elements). It works as regularization
             and could improve generalization. 
           </p>
         </div>
@@ -346,9 +346,9 @@
         <h3 class="title is-4">Geometric-aware Self-Attention</h3>
         <div class="content has-text-justified">
           <p>
-            Considering the unique properties for 3D Data, we carefully design distinctive geometric shapes and assign them as the attention
+            Considering the unique properties for 3D Data, we carefully design distinctive geometric shapes and assign them to the attention
             span of the codebook elements. We also use the geometric information to directly guide the attention learning, encouraging the attention
-            to choose the code with matching sparse pattern with input activation. 
+            to choose the code with matching sparse pattern like input activation. 
           </p>
         </div>
         <div class="content has-text-centered">
@@ -373,8 +373,8 @@
         <h3 class="title is-4">Visualization of Attention Map</h3>
         <div class="content has-text-justified">
           <p>
-            One of the well-known issue of transformer optimization is the "attention collapse". The attention map tends to become
-            uniform in latter layers. When introducing codebook-based attention, the codes also tends to be similar. After employing 
+            One of the well-known issues of transformer optimization is the "attention collapse". The attention map tends to become
+            uniform in the latter layers. When introducing codebook-based attention, the codes also tend to be similar. After employing 
             the geometric guidance, the attention map becomes distinctive. 
           </p>
         </div>
@@ -388,8 +388,9 @@
         <h3 class="title is-4">Visualization of Geometry Guidance</h3>
         <div class="content has-text-justified">
           <p>
-            The voxels on wall corner tend to choose "vertical-cross" shaped code, the voxles 
-            on floor and desk tends to choose the "plane" shaped codes. The remote voxels with low density favors the code with larger receptive field. 
+            The voxels on the wall / corner tend to choose "vertical-cross" shaped code, the voxels 
+            on the floor / desk tend to choose the "plane" shaped codes. The remote voxels with low density 
+            favor the codes with larger receptive field. 
           </p>
         </div>
         <div class="content has-text-centered">
