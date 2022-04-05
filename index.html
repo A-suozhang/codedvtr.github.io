@@ -269,8 +269,8 @@
             the difficulty of transformer’s application.
           </p>
           <p>
-            We propose CodedVTR (<b>Code</b>book-based <b>V</b>oxel <b>TR</b>ansformer), which im
-            proves data efficiency and generalization ability for 3D
+            We propose CodedVTR (<b>Code</b>book-based <b>V</b>oxel <b>TR</b>ansformer), which improves 
+            data efficiency and generalization ability for 3D
             sparse voxel transformers. On the one hand, we propose the
             codebook-based attention that projects an attention space
             into its subspace represented by the combination of “prototypes” in a learnable codebook. It regularizes attention
@@ -307,7 +307,7 @@
         <h2 class="title is-3">Motivation</h2>
 
         <!-- Generalization. -->
-        <h3 class="title is-4">Transformer's generalization Issue</h3>
+        <h3 class="title is-4">Transformer's Generalization Issue</h3>
         <div class="content has-text-justified">
           <p>
             Transformers are known to have <b>generalization issues</b>. It requires large-scale pre-training and cannot be directly trained
@@ -331,8 +331,12 @@
         <div class="content has-text-justified">
           <p>
             Instead of directly learning the mapping from the activation space to the attention weight space. We project the attention learning
-            space to its subspace represented by the weighted sum of a few attention weight "prototypes" (codebook elements). It works as regularization
-            and could improve generalization. 
+            space to its subspace represented by the weighted sum of a few attention weight "prototypes" (codebook elements). It restricts
+            the attention learning space and works as regularization, which could improve generalization. 
+            
+            (Interestingly, the codebook-based self-attention could be viewed as an intermediate state of transformer and convolution. 
+            When the codebook has only one element, it becomes convolution. And when the codebook has infinite number of elements, it 
+            works as transformer.)
           </p>
         </div>
         <div class="content has-text-centered">
@@ -346,7 +350,7 @@
         <h3 class="title is-4">Geometric-aware Self-Attention</h3>
         <div class="content has-text-justified">
           <p>
-            Considering the unique properties for 3D Data, we carefully design distinctive geometric shapes and assign them to the attention
+            Considering the unique properties (distinct geometric shapes and varying densities) for 3D data, we carefully design distinctive geometric shapes and assign them to the attention
             span of the codebook elements. We also use the geometric information to directly guide the attention learning, encouraging the attention
             to choose the code with matching sparse pattern like input activation. 
           </p>
@@ -369,6 +373,21 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Experiments and Visualization</h2>
+        <!-- Perf. -->
+        <h3 class="title is-4">Performance</h3>
+        <div class="content has-text-justified">
+          <p>
+            CodedVTR could improve performance on both indoor and outdoor 3d semantic segmentation tasks. Noted that our CodedVTR block is 
+            compatible with existing sparse-conv based methods (e.g., SPVCNN).
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/src/exp.png"
+          class="exp-image"
+          alt="Experimental Results Image."
+          width="1600px" height="600px"/>
+        </div>
+        <!--/ Perf. -->
         <!-- AttnMap. -->
         <h3 class="title is-4">Visualization of Attention Map</h3>
         <div class="content has-text-justified">
@@ -397,21 +416,6 @@
           <img src="./static/src/geo-vis.png"
           class="geo-vis"
           alt="Visualization of geometry."/>
-        </div>
-        <!--/ Geo-Vis. -->
-        <!-- Geo-vis. -->
-        <h3 class="title is-4">Performance</h3>
-        <div class="content has-text-justified">
-          <p>
-            CodedVTR could improve performance on both indoor and outdoor 3d semantic segmentation tasks. Noted that our CodedVTR block is 
-            compatible with existing sparse-conv based methods. (e.g., SPVCNN)
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <img src="./static/src/exp.png"
-          class="exp-image"
-          alt="Experimental Results Image."
-          width="1600px" height="600px"/>
         </div>
         <!--/ Geo-Vis. -->
       </div>
