@@ -278,7 +278,8 @@
             we propose geometry-aware self-attention that utilizes geometric information (geometric pattern, density) to guide attention learning. 
           </p>
           <p>
-            CodedVTR could be embedded into existing sparse convolution-based methods, and bring consistent performance improvements for indoor and outdoor 3Dsemantic segmentation tasks.
+            CodedVTR could be embedded into existing sparse convolution-based methods, and bring consistent performance improvements 
+            for indoor and outdoor 3D semantic segmentation tasks.
           </p>
         </div>
       </div>
@@ -313,7 +314,7 @@
             Transformers are known to have <b>generalization issues</b>. It requires large-scale pre-training and cannot be directly trained
             on smaller datasets without overfitting. As the ViT paper states, <i>"When directly trained on the ImageNet, 
             ViT yields modest accuracies of a few points below ResNets of comparable size".</i> When introducing transformers into the <b>3d domain</b>,
-            the generalization issue is aggravated by 3d data's relative restricted data scale and unique properties (sparse, geometric shape). 
+            the generalization issue is aggravated by 3d data's relative restricted data scale and unique properties (sparsity, varying geometric shape). 
           </p>
         </div>
         <!-- <div class="columns is-vcentered interpolation-panel">
@@ -351,7 +352,7 @@
           <p>
             Considering the unique properties (distinct geometric shapes and varying densities) for 3D data, we carefully design distinctive geometric shapes and assign them to the attention
             span of the codebook elements. We also use the geometric information to directly guide the attention learning, encouraging the attention
-            to choose the code with matching sparse pattern like input activation. 
+            to choose the codebook element with the sparse pattern similar to the input activation. 
           </p>
         </div>
         <div class="content has-text-centered">
@@ -392,7 +393,7 @@
         <div class="content has-text-justified">
           <p>
             One of the well-known issues of transformer optimization is the "attention collapse". The attention map tends to become
-            uniform in the latter layers. When introducing codebook-based attention, the codes also tend to be similar. After employing 
+            uniform in the latter layers. When introducing codebook-based attention, the codebook elements also tend to be similar. After employing 
             the geometric guidance, the attention map becomes distinctive. 
           </p>
         </div>
@@ -406,9 +407,9 @@
         <h3 class="title is-4">Visualization of Geometry Guidance</h3>
         <div class="content has-text-justified">
           <p>
-            The voxels on the wall/corner tend to choose "vertical-cross" shaped code, the voxels 
-            on the floor/desk tend to choose the "plane" shaped codes. The remote voxels with low density 
-            favor the codes with larger receptive field. 
+            The voxels on the wall/corner tend to choose "vertical-cross" shaped codebook elements, the voxels 
+            on the floor/desk tend to choose the "plane" shaped codebook elements. The remote voxels with low density 
+            favor the codebook elements with larger receptive field. 
           </p>
         </div>
         <div class="content has-text-centered">
