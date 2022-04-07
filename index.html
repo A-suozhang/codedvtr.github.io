@@ -314,7 +314,7 @@
             Transformers are known to have <b>generalization issues</b>. It requires large-scale pre-training and cannot be directly trained
             on smaller datasets without overfitting. As the ViT paper states, <i>"When directly trained on the ImageNet, 
             ViT yields modest accuracies of a few points below ResNets of comparable size".</i> When introducing transformers into the <b>3d domain</b>,
-            the generalization issue is aggravated by 3d data's relative restricted data scale and unique properties (sparsity, varying geometric shape). 
+            the generalization issue is aggravated by 3D data's relative restricted data scale and unique properties (sparsity, varying geometric shape). 
           </p>
         </div>
         <!-- <div class="columns is-vcentered interpolation-panel">
@@ -331,7 +331,9 @@
         <h3 class="title is-4">Codebook-based Self-Attention</h3>
         <div class="content has-text-justified">
           <p>
-            Instead of directly learning the mapping from the activation space to the attention weight space. We project the attention learning
+            Instead of directly learning the mapping from the activation space to the attention weight space. We construct a learnable codebook
+            , and use weighted sum of the codebook elements to approximate the attention weight. Noted that both the codebook elements and the 
+            weights are learnable.  It projects the attention learning
             space to its subspace represented by the weighted sum of a few attention weight "prototypes" (codebook elements). It restricts
             the attention learning space and works as regularization, which could improve generalization. <br>
             (Interestingly, the codebook-based self-attention could be viewed as an intermediate state of transformer and convolution. 
@@ -377,7 +379,7 @@
         <h3 class="title is-4">Performance</h3>
         <div class="content has-text-justified">
           <p>
-            CodedVTR could improve performance on both indoor and outdoor 3d semantic segmentation tasks. Noted that our CodedVTR block is 
+            CodedVTR could improve performance on both indoor and outdoor 3D semantic segmentation tasks. Noted that our CodedVTR block is 
             compatible with existing sparse-conv based methods (e.g., SPVCNN).
           </p>
         </div>
